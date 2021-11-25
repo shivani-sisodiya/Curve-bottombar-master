@@ -2,19 +2,21 @@
 Curve BottomNavigationView
 A simple curved bottom navigation for Android with AnimatedVectorDrawable and Jetpack Navigation support.
 
-Setup
+## Setup
 
 Update your module level build.gradle file and add the following dependency. Please check the project releases for latest versions.
 
-dependencies {
-    implementation project(path: ':bottomnavigation')
-}
 
-Setup in XML
+    dependencies {
+    implementation project(path: ':bottomnavigation')
+    }
+    
+    
+## Setup in XML
 
 Add BottomNavigation in your layout xml file.
 
-  <com.curve.bottomnavigation.BottomNavigation
+     <com.curve.bottomnavigation.BottomNavigation
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="85dp"
@@ -25,13 +27,14 @@ Add BottomNavigation in your layout xml file.
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/bottom_bar_gradiant"
         android:clickable="false" />
-
-Setup in Code
-       bottomNavigation.add(new BottomNavigation.Model(1, R.drawable.ic_baseline_home_24));
-        bottomNavigation.add(new BottomNavigation.Model(2, R.drawable.ic_baseline_assignment_turned_in_24));
-        bottomNavigation.add(new BottomNavigation.Model(3, R.drawable.ic_baseline_adb_24));
-        bottomNavigation.add(new BottomNavigation.Model(4, R.drawable.ic_baseline_person_24));
-
+        
+## Setup in Code
+    
+        bottomNavigation.add(new BottomNavigation.Model(1, R.drawable.ic_baseline_home_24));
+        
+    
+ To listen whenever the menu item is clicked you can pass a lambda to setOnMenuItemClickListener.
+    
         bottomNavigation.setOnClickMenuListener(new BottomNavigation.ClickListener() {
             @Override
             public void onClickItem(BottomNavigation.Model item) {
